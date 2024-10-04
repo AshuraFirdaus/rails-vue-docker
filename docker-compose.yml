@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    command: bash -c "bundle install && rails server -b '0.0.0.0'"
+    volumes:
+      - .:/app # Map the root folder to /app in the container
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
