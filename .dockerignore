@@ -1,0 +1,9 @@
+# .dockerignore
+*.log
+tmp/
+node_modules/
+.git/
+#node_modules
+#Dockerfile
+#.dockerignore
+#src for this : https://github.com/docker/for-win/issues/14083
