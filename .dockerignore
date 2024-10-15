@@ -1,7 +1,6 @@
 # .dockerignore
 *.log
 tmp/
-node_modules/
 .git/
 #node_modules
 #Dockerfile

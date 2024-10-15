@@ -1,10 +1,22 @@
 {
   "dependencies": {
     "@rails/webpacker": "5.4.4",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "vue": "^3.5.11",
+    "webpack": "4.46.0",
+    "webpack-cli": "3.3.12"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3"
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@vue/compiler-sfc": "^3.5.11",
+    "babel-loader": "^8.4.1",
+    "terser-webpack-plugin": "^4.2.3",
+    "vue-loader": "^16.8.3",
+    "webpack-dev-server": "3"
+  },
+  "scripts": {
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open",
+    "dev": "webpack --mode development"
   }
 }
